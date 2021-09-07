@@ -1,0 +1,84 @@
+{
+  "store.home": { 
+    "blocks": [
+      "rich-text#TitleHeading",
+      "rich-text#DescriptionHead",
+      "flex-layout.row#FilaDeBotones",
+      "flex-layout.row#maincontainer"
+    ]
+  },
+  "rich-text#TitleHeading": { 
+    "props": { 
+      "text": "VTEX IO",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "font": "t-heading-1"
+    }
+  },
+  "rich-text#DescriptionHead": {
+    "props": { 
+      "text": "DESCRIPTION",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER"
+    }
+  },
+  "flex-layout.row#FilaDeBotones": {
+    "props": {
+      "colSizing": "auto",
+      "colGap": 2,
+      "marginTop": 2,
+      "blockClass": "btn-custom"
+    },
+    "children": [
+      "link#UriUno"
+    ]
+  },
+  "link#UriUno": {
+    "props": {
+      "label": "Ir a google",
+      "href": "https://google.com/",
+      "buttonsProps": {
+        "variant": "primary"
+      }
+    }
+  },
+  "product-summary.shelf#demo1": {
+    "children": [
+      "product-summary-name",
+      "product-rating-inline",
+      "product-summary-space",
+      "product-summary-price",
+      "product-summary-buy-button"
+    ]
+  },
+  "list-context.product-list#demo2": {
+    "blocks": ["product-summary"],
+    "children": ["slider-layout#text-test"]
+  },
+  "slider-layout#text-test": {
+    "props": {
+      "itemsPerPage": {
+        "desktop": 3,
+        "tablet": 2,
+        "phone": 1
+      },
+      "infinite": true,
+      "showNavigationArrows": "desktopOnly",
+      "blockClass": "carousel"
+    }
+  },
+
+  "flex-layout.row#maincontainer": {
+    "props": {
+      "horizontalAlign": "center",
+      "verticalAlign": "center",
+      "preventHorizontalStretch": false,
+      "preventVerticalStretch": true,
+      "fullWidth": false,
+      "colGap": 5
+    },
+    "children": [
+      "list-context.product-list#demo2"
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "store.product": {
+    "children": [
+      "rich-text#TitleHeading",
+      "product-images",
+      "product-name",
+      "add-to-cart-button"
+    ]
+  },
+  "product-images": {
+    "props": {
+      "maxHeight": 200
+    }
+  }
+}
