@@ -8,7 +8,10 @@
   "header-layout.desktop": {
     "children": [
       "sticky-layout#desktop"
-    ]
+    ],
+    "props": {
+      "blockClass": "headercolorido"
+    }
   },
   "sticky-layout#desktop": {
     "props": {
@@ -20,18 +23,23 @@
     "props": {
       "horizontalAlign": "center",
       "verticalAlign": "center",
-      "preventHorizontalStretch": true,
+      "preventHorizontalStretch": false,
       "preventVerticalStretch": true,
-      "fullWidth": true
+      "fullWidth": true,
+      "blockClass": "headercolorido2"
     },
     "children": [
       "flex-layout.col#logo-desktop",
-      "flex-layout.col#spacer",
-      "search-bar",
+      "search-bar#buscadorcito",
       "locale-switcher",
       "login",
       "minicart.v2"
     ]
+  },
+  "search-bar#buscadorcito": {
+    "props": {
+      "blockClass": "w-100"
+    }
   },
   "flex-layout.col#spacer": {
     "props": {
@@ -48,7 +56,7 @@
     "props": {
       "title": "Logo",
       "href": "/",
-      "url": "https://1000marcas.net/wp-content/uploads/2020/02/logo-Google.png",
+      "url": "https://aguaphplus.com/wp-content/uploads/2017/08/Logo-farmatodo-300x98.jpg",
       "width": "100"
     }
   },
@@ -62,7 +70,7 @@
     "children": [
       "drawer",
       "logo",
-      "flex-layout.col#spacer",
+      //"flex-layout.col#spacer",
       "login",
       "minicart.v2"
     ],

@@ -1,0 +1,29 @@
+.paragraph.paragraph--headingA {
+    color: white;
+    font-weight: 300;
+    font-size: 5rem;
+    line-height: normal;
+    margin-block-end: 0;
+    margin-block-start: 0;
+}
+
+.paragraph.paragraph--headingB {
+    color: white;
+    font-weight: 300;
+    font-size: 3rem;
+    line-height: normal;
+    margin-block-end: 0;
+    margin-block-start: 0;
+}
+
+.paragraph.paragraph--footerA {
+    color: white;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 1.2rem;
+    line-height: normal;
+    margin-block-end: 0;
+    margin-block-start: 0;
+    display: block;
+    padding: 25px 0;
+}

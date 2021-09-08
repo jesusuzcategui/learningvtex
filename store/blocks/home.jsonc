@@ -1,47 +1,92 @@
 {
-  "store.home": { 
+  "store.home": {
     "blocks": [
-      "rich-text#TitleHeading",
-      "rich-text#DescriptionHead",
-      "flex-layout.row#FilaDeBotones",
-      "flex-layout.row#maincontainer"
+      "flex-layout.row#HeadingLayer",
+      "flex-layout.row#maincontainer",
+      "flex-layout.row#FootLayer"
     ]
   },
-  "rich-text#TitleHeading": { 
-    "props": { 
+
+  //Rows-container header
+  "flex-layout.row#HeadingLayer":{
+    "props": {
+      "fullWidth": true,
+      "blockClass": "heading-cute"
+    },
+    "children": [
+      "flex-layout.col#columnaHeading"
+    ]
+  },
+
+  //Container type column to header elements
+
+  "flex-layout.col#columnaHeading": {
+    "props": {
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "rich-text#headingLayoutA",
+      "rich-text#headingLayoutb"
+    ]
+  },
+
+  //Text to header
+
+  "rich-text#headingLayoutA": {
+    "props": {
       "text": "VTEX IO",
       "textAlignment": "CENTER",
       "textPosition": "CENTER",
-      "font": "t-heading-1"
+      "font": "t-heading-1",
+      "blockClass": "headingA"
     }
   },
-  "rich-text#DescriptionHead": {
-    "props": { 
-      "text": "DESCRIPTION",
-      "textAlignment": "CENTER",
-      "textPosition": "CENTER"
-    }
-  },
-  "flex-layout.row#FilaDeBotones": {
+  "rich-text#headingLayoutb": {
     "props": {
-      "colSizing": "auto",
-      "colGap": 2,
-      "marginTop": 2,
-      "blockClass": "btn-custom"
+      "text": "Powered By Chucho",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "font": "t-heading-1",
+      "blockClass": "headingB"
+    }
+  },
+
+
+  //Rows-container footer
+  "flex-layout.row#FootLayer":{
+    "props": {
+      "fullWidth": true,
+      "blockClass": "footer-cute"
     },
     "children": [
-      "link#UriUno"
+      "flex-layout.col#columnaFoot"
     ]
   },
-  "link#UriUno": {
+
+  //Container type column to footer elements
+
+  "flex-layout.col#columnaFoot": {
     "props": {
-      "label": "Ir a google",
-      "href": "https://google.com/",
-      "buttonsProps": {
-        "variant": "primary"
-      }
+      "preventVerticalStretch": true
+    },
+    "children": [
+      "rich-text#FooterLayoutA"
+    ]
+  },
+
+  //Text to footer
+
+  "rich-text#FooterLayoutA": {
+    "props": {
+      "text": "VTex Learning",
+      "textAlignment": "CENTER",
+      "textPosition": "CENTER",
+      "blockClass": "footerA"
     }
   },
+
+  //Products section
+
   "product-summary.shelf#demo1": {
     "children": [
       "product-summary-name",
@@ -64,6 +109,7 @@
       },
       "infinite": true,
       "showNavigationArrows": "desktopOnly",
+      "showPaginationDots": "never",
       "blockClass": "carousel"
     }
   },
